@@ -5,9 +5,10 @@ function add(number)
 		return 0;
 	}
 
-	if(number.includes(","))
+	if(number.includes(",") || number.includes("\n"))
 	{
-		var array = number.split(",");
+		var dilimiters =  [",","\n"];
+		var array = number.split(/,|\n/g);	
 		return sumOfNumbers(array);	
 	}
 

@@ -15,3 +15,7 @@ it("Should return the sum of 2 numbers", () => {
 it("Should return the sum of multiple numbers", () => {
 	expect(add("2,3,5")).toBe(10);
 });
+
+it("Should split the string on new line", () => {
+	expect(add("1\n2")).toBe(3);
+});
