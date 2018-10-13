@@ -4,9 +4,17 @@ function add(number)
 	{
 		return 0;
 	}
-	return parseInt(number);
 
-	
+	if(number.includes(","))
+	{
+		var array = number.split(",")
+		return parseInt(array[0]) + parseInt(array[1]);
+	}
+
+	else
+	{
+		return parseInt(number);
+	}	
 }
 
 module.exports = add;
