@@ -7,7 +7,7 @@ function add(number)
 
 	if(number.length > 1)
 	{
-		var array = number.split(/,|\n/g);	
+		var array = number.split(/,|\n/);	
 		return sumOfNumbers(array);	
 	}
 
@@ -30,5 +30,25 @@ function sumOfNumbers(array)
 	return sum;
 }
 
-
 module.exports = add;
+
+
+/*
+
+Náði ekki að kasta villu en komst svona langt með það...
+function checkNegative(number)
+{
+ 	var negativeNums = [];
+	for(var i = 0; i < number.length; i++)
+  	{
+  		if(parseInt(number[i]) < 0)
+  	  	{
+    		negativeNums.push(parseInt(number[i]);
+  		}
+  	}
+  	if(negativeNums.length > 0)
+  	{
+  		throw new Error("negatives not allowed: " + negativeNums.join(", "));
+  	}	
+ }
+*/
