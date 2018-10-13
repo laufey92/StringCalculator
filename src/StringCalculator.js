@@ -7,8 +7,13 @@ function add(number)
 
 	if(number.includes(","))
 	{
+		var sum = 0;
 		var array = number.split(",")
-		return parseInt(array[0]) + parseInt(array[1]);
+		for(var i = 0; i< array.length; i++)
+		{
+			sum += parseInt(array[i]);
+		}
+		return sum
 	}
 
 	else
