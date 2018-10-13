@@ -5,9 +5,8 @@ function add(number)
 		return 0;
 	}
 
-	if(number.includes(",") || number.includes("\n"))
+	if(number.length > 1)
 	{
-		var dilimiters =  [",","\n"];
 		var array = number.split(/,|\n/g);	
 		return sumOfNumbers(array);	
 	}
@@ -23,9 +22,13 @@ function sumOfNumbers(array)
 	var sum = 0;
 	for(var i = 0; i< array.length; i++)
 	{
-		sum += parseInt(array[i]);
+		if(array[i] < 1000)
+		{
+			sum += parseInt(array[i]);
+		}
 	}
 	return sum;
 }
+
 
 module.exports = add;

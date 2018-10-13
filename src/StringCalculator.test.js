@@ -19,3 +19,9 @@ it("Should return the sum of multiple numbers", () => {
 it("Should split the string on new line", () => {
 	expect(add("1\n2")).toBe(3);
 });
+
+
+it("Should ignore numbers over 1000", () => {
+	expect(add("1001\n2")).toBe(2);
+});
+
